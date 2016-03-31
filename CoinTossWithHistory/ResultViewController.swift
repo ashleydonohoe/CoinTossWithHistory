@@ -8,6 +8,8 @@
 
 import UIKit
 
+var tossHistory = [String]()
+
 class ResultViewController: UIViewController {
 
     @IBOutlet weak var resultLabel: UILabel!
@@ -28,15 +30,24 @@ class ResultViewController: UIViewController {
     
 
     func determineWinner() {
-        
         let number = arc4random_uniform(2)
         if number == 0 {
+            let result = "Heads"
+            tossHistory.append(result)
+            NSUserDefaults.standardUserDefaults().setObject(tossHistory, forKey: "historyContent")
             resultLabel.text = "Heads"
             resultImage.image = UIImage(named: "heads.jpg")
         } else {
+            let result = "Tails"
+            tossHistory.append(result)
+            NSUserDefaults.standardUserDefaults().setObject(tossHistory, forKey: "historyContent")
             resultLabel.text = "Tails"
             resultImage.image = UIImage(named: "tails.jpg")
         }
+        print(tossHistory)
     }
-
+    
+    @IBAction func flipAgain(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }

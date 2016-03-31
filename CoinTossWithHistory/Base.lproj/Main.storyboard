@@ -38,6 +38,9 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eUv-ps-u57">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="55" y="161" width="291" height="254"/>
+                                </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cat-kt-D29">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -45,13 +48,22 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqF-7x-vgN">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Flip Again"/>
+                                <connections>
+                                    <action selector="flipAgain:" destination="SFl-jS-oST" eventType="touchUpInside" id="CiB-Zn-fI2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="eUv-ps-u57" firstAttribute="top" secondItem="cat-kt-D29" secondAttribute="bottom" constant="37" id="19d-mr-ysk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cat-kt-D29" secondAttribute="trailing" constant="76" id="9n4-au-Irv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eUv-ps-u57" secondAttribute="trailing" constant="34" id="ARa-Tj-ARE"/>
+                            <constraint firstItem="tsq-Ie-F9w" firstAttribute="top" secondItem="ZqF-7x-vgN" secondAttribute="bottom" constant="42" id="Pkc-rj-BFX"/>
                             <constraint firstItem="eUv-ps-u57" firstAttribute="leading" secondItem="gou-c4-gZA" secondAttribute="leadingMargin" constant="35" id="Q0k-i0-Yb7"/>
+                            <constraint firstItem="ZqF-7x-vgN" firstAttribute="centerX" secondItem="eUv-ps-u57" secondAttribute="centerX" id="WoR-0o-wDT"/>
                             <constraint firstItem="cat-kt-D29" firstAttribute="leading" secondItem="gou-c4-gZA" secondAttribute="leadingMargin" constant="77" id="cCo-Y9-b0S"/>
                             <constraint firstItem="cat-kt-D29" firstAttribute="top" secondItem="AWs-xI-4nQ" secondAttribute="bottom" constant="84" id="krY-iL-Zd9"/>
                             <constraint firstItem="tsq-Ie-F9w" firstAttribute="top" secondItem="eUv-ps-u57" secondAttribute="bottom" constant="185" id="n7O-rh-Oba"/>
@@ -60,6 +72,7 @@
                             <mask key="subviews">
                                 <exclude reference="eUv-ps-u57"/>
                                 <exclude reference="cat-kt-D29"/>
+                                <exclude reference="ZqF-7x-vgN"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="9n4-au-Irv"/>
@@ -68,6 +81,8 @@
                                 <exclude reference="19d-mr-ysk"/>
                                 <exclude reference="ARa-Tj-ARE"/>
                                 <exclude reference="Q0k-i0-Yb7"/>
+                                <exclude reference="WoR-0o-wDT"/>
+                                <exclude reference="Pkc-rj-BFX"/>
                                 <exclude reference="n7O-rh-Oba"/>
                             </mask>
                         </variation>
@@ -75,6 +90,7 @@
                             <mask key="subviews">
                                 <include reference="eUv-ps-u57"/>
                                 <include reference="cat-kt-D29"/>
+                                <include reference="ZqF-7x-vgN"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="9n4-au-Irv"/>
@@ -83,6 +99,8 @@
                                 <include reference="19d-mr-ysk"/>
                                 <include reference="ARa-Tj-ARE"/>
                                 <include reference="Q0k-i0-Yb7"/>
+                                <include reference="WoR-0o-wDT"/>
+                                <include reference="Pkc-rj-BFX"/>
                                 <include reference="n7O-rh-Oba"/>
                             </mask>
                         </variation>
