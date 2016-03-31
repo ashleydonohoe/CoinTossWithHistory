@@ -210,7 +210,7 @@
                                 </state>
                                 <connections>
                                     <action selector="flipCoin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ql-Vn-iW9"/>
-                                    <segue destination="SFl-jS-oST" kind="presentation" id="PGe-kA-e9h"/>
+                                    <segue destination="SFl-jS-oST" kind="presentation" identifier="seeResults" id="PGe-kA-e9h"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heads.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lSd-mp-Gnq">

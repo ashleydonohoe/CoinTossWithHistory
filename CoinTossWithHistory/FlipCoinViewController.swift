@@ -19,10 +19,9 @@ class FlipCoinViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func flipCoin(sender: AnyObject) {
-        
-    }
     
+    override func motionBegan(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        performSegueWithIdentifier("seeResults", sender: self)
+    }
 }
 
