@@ -1,13 +1,105 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--History View Controller-->
+        <scene sceneID="6eu-gc-IYi">
+            <objects>
+                <viewController id="bjR-rH-PZY" customClass="HistoryViewController" customModule="CoinTossWithHistory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KrI-4b-rJC"/>
+                        <viewControllerLayoutGuide type="bottom" id="jOn-aH-vEo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rep-la-t44">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbS-UA-Cq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194" y="-13"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="NFN-4x-skW">
+            <objects>
+                <viewController id="SFl-jS-oST" customClass="ResultViewController" customModule="CoinTossWithHistory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AWs-xI-4nQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="tsq-Ie-F9w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gou-c4-gZA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eUv-ps-u57">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cat-kt-D29">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eUv-ps-u57" firstAttribute="top" secondItem="cat-kt-D29" secondAttribute="bottom" constant="37" id="19d-mr-ysk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cat-kt-D29" secondAttribute="trailing" constant="76" id="9n4-au-Irv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eUv-ps-u57" secondAttribute="trailing" constant="34" id="ARa-Tj-ARE"/>
+                            <constraint firstItem="eUv-ps-u57" firstAttribute="leading" secondItem="gou-c4-gZA" secondAttribute="leadingMargin" constant="35" id="Q0k-i0-Yb7"/>
+                            <constraint firstItem="cat-kt-D29" firstAttribute="leading" secondItem="gou-c4-gZA" secondAttribute="leadingMargin" constant="77" id="cCo-Y9-b0S"/>
+                            <constraint firstItem="cat-kt-D29" firstAttribute="top" secondItem="AWs-xI-4nQ" secondAttribute="bottom" constant="84" id="krY-iL-Zd9"/>
+                            <constraint firstItem="tsq-Ie-F9w" firstAttribute="top" secondItem="eUv-ps-u57" secondAttribute="bottom" constant="185" id="n7O-rh-Oba"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="eUv-ps-u57"/>
+                                <exclude reference="cat-kt-D29"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9n4-au-Irv"/>
+                                <exclude reference="cCo-Y9-b0S"/>
+                                <exclude reference="krY-iL-Zd9"/>
+                                <exclude reference="19d-mr-ysk"/>
+                                <exclude reference="ARa-Tj-ARE"/>
+                                <exclude reference="Q0k-i0-Yb7"/>
+                                <exclude reference="n7O-rh-Oba"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="eUv-ps-u57"/>
+                                <include reference="cat-kt-D29"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9n4-au-Irv"/>
+                                <include reference="cCo-Y9-b0S"/>
+                                <include reference="krY-iL-Zd9"/>
+                                <include reference="19d-mr-ysk"/>
+                                <include reference="ARa-Tj-ARE"/>
+                                <include reference="Q0k-i0-Yb7"/>
+                                <include reference="n7O-rh-Oba"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="resultImage" destination="eUv-ps-u57" id="7ri-1D-Ogx"/>
+                        <outlet property="resultLabel" destination="cat-kt-D29" id="qUQ-BE-p4J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0NV-YY-ltI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396" y="-13"/>
+        </scene>
+        <!--FlipCoinViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlipCoinViewController" title="FlipCoinViewController" id="BYZ-38-t0r" customClass="FlipCoinViewController" customModule="CoinTossWithHistory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +107,97 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coin Toss Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5t-XZ-cg6">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpD-ar-NC7">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Flip Phone To Toss">
+                                    <color key="titleShadowColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCoin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ql-Vn-iW9"/>
+                                    <segue destination="SFl-jS-oST" kind="presentation" id="PGe-kA-e9h"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heads.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lSd-mp-Gnq">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="139" id="AlL-K3-Alh"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AlL-K3-Alh"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="AlL-K3-Alh"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="e5t-XZ-cg6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="31I-gr-ls6"/>
+                            <constraint firstItem="lSd-mp-Gnq" firstAttribute="top" secondItem="e5t-XZ-cg6" secondAttribute="bottom" constant="90" id="4Pq-gk-ubX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hpD-ar-NC7" secondAttribute="bottom" constant="47" id="8yw-by-eVo"/>
+                            <constraint firstItem="hpD-ar-NC7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="97" id="Bnw-q7-4kG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e5t-XZ-cg6" secondAttribute="trailing" constant="83" id="LpG-5y-qWX"/>
+                            <constraint firstItem="lSd-mp-Gnq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="99" id="g6p-v1-zPP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hpD-ar-NC7" secondAttribute="trailing" constant="97" id="koV-PW-IX8"/>
+                            <constraint firstItem="lSd-mp-Gnq" firstAttribute="trailing" secondItem="hpD-ar-NC7" secondAttribute="trailing" id="uWw-8R-Qkl"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="e5t-XZ-cg6"/>
+                                <exclude reference="hpD-ar-NC7"/>
+                                <exclude reference="lSd-mp-Gnq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="31I-gr-ls6"/>
+                                <exclude reference="LpG-5y-qWX"/>
+                                <exclude reference="4Pq-gk-ubX"/>
+                                <exclude reference="g6p-v1-zPP"/>
+                                <exclude reference="uWw-8R-Qkl"/>
+                                <exclude reference="Bnw-q7-4kG"/>
+                                <exclude reference="koV-PW-IX8"/>
+                                <exclude reference="8yw-by-eVo"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="e5t-XZ-cg6"/>
+                                <include reference="hpD-ar-NC7"/>
+                                <include reference="lSd-mp-Gnq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="31I-gr-ls6"/>
+                                <include reference="LpG-5y-qWX"/>
+                                <include reference="4Pq-gk-ubX"/>
+                                <include reference="g6p-v1-zPP"/>
+                                <include reference="uWw-8R-Qkl"/>
+                                <include reference="Bnw-q7-4kG"/>
+                                <include reference="koV-PW-IX8"/>
+                                <include reference="8yw-by-eVo"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-432" y="-13"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heads.jpg" width="400" height="400"/>
+    </resources>
 </document>
