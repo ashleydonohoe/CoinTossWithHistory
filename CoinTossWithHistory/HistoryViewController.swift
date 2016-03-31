@@ -8,12 +8,19 @@
 
 import UIKit
 
-class HistoryViewController: UIViewController {
+class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var table: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if(NSUserDefaults.standardUserDefaults().objectForKey("historyContent") != nil) {
+            tossHistory = NSUserDefaults.standardUserDefaults().objectForKey("historyContent") as! [String]
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        table.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,5 +30,15 @@ class HistoryViewController: UIViewController {
     
     @IBAction func dismiss(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tossHistory.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+        cell.textLabel?.text = tossHistory[indexPath.row]
+        return cell
     }
 }

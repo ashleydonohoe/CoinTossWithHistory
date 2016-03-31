@@ -29,6 +29,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bjR-rH-PZY" id="79t-ff-xuc"/>
+                                    <outlet property="delegate" destination="bjR-rH-PZY" id="mXw-cV-uMI"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTg-Aj-9ty">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -79,6 +83,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="table" destination="cAI-5h-7FG" id="Ufc-e1-5rO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbS-UA-Cq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
